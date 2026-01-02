@@ -7,8 +7,8 @@ from groq import Groq
 app = Flask(__name__, template_folder='templates')
 CORS(app)
 
-GROQ_API_KEY = "GROQ_API_KEY"
-client = Groq(api_key=GROQ_API_KEY)
+keyy = "GROQ_API_KEY"
+client = Groq(api_key=keyy)
 
 @app.route('/')
 def home():
@@ -33,4 +33,5 @@ def ask_bot():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
+
     app.run(host='0.0.0.0', port=port)
